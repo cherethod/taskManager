@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      max-width: 450px;
+      margin: 0 auto;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    h1, h2 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    h2 {
+      opacity: .7;
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 32px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* INICIAMOS LOS ESTILOS DE LA ANIMACIÓN (actualmente solo está incorporada en Chrome y Edge) */
+
+    /* CREAMOS EL KEYFRAME DE LA ANIMACIÓN */
+    @keyframes show {
+      from {
+        opacity: 0;
+        scale: 25%;
+      }
+      to {
+        opacity: 1;
+        scale: 100%;
+      }
+    }
+
+    img {
+      view-timeline-name: --image; /* Enlazamos un nombre al scroll */
+      view-timeline-axis: block; /* Hacemos que capte el scroll en vertical (block) o en horizontal (inline) */
+
+      animation-timeline: --image;/* Hacemos el enlace entre el scroll y el elemento */
+      animation-name: show; /* Enlazamos el efecto con la animación (keyframe) que hemos designado */
+       
+      /* Ajustamos el rango para que la imagen sea vista antes de que esté completamente visible (dentro del viewport) */
+       animation-range: entry 25% cover 50%; /* Hacemos que el efecto se inicie cuando el elemento está visible en un 25% (entry) y que se termine al estar un 50% visible (cover). Estos valores deberemos ajustarlos a nuestras necesidades */
+       /* Tras esto la imágen si está visible menos de un 25% se muestra sin efecto (sin opacidad y escala total), vamos a corregir esto */
+       animation-fill-mode: both; /* Con esto hacemos que el efecto de la animación se aplique en ambos sentidos (el animation-range se aplique "hacía delante y hacía atrás") */
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Marvel's Spider-Man 2 va a ser la bomba</h1>
+  <h2>Vuelven los dos Spider-Man, Peter Parker y Miles
+    Morales, para una nueva y emocionante aventura en la
+    aclamada franquicia de Marvel's Spider-Man.</h2>
+  <p>
+    Balancéate, salta y usa las nuevas alarañas para recorrer la
+    Nueva York de Marvel, cambia rápidamente entre Peter Parker
+    y Miles Morales para experimentar historias diferentes y
+    nuevos poderes épicos, y haz frente al icónico villano Venom
+    que amenaza con destruir sus vidas, su ciudad y a sus seres
+  </p>
+  <p>Protagonizado por uno de los superhéroes más emblemáticos
+    del mundo, Marvel's Spider-Man 2 presenta las habilidades
+    acrobáticas, la improvisación y las telarañas que caracterizan
+    al trepamuros, interpretado tanto por Peter Parker como Miles
+    Morales, en su lucha contra el peligroso Venom y el resto de
+    villanos del mundo Marvel.
+  </p>
+  <img src="https://image.api.playstation.com/vulcan/ap/rnd/202306/1219/60eca3ac155247e21850c7d075d01ebf0f3f5dbf19ccd2a1.jpg" alt="">
+  <p>Insomniac Games publica una nueva ilustración del Venom de
+    Marvel's Spider-Man 2 junto con detalles del antagonista. El
+    juego llega el 20 de octubre sólo para PS5.</p>
+  <img src="https://pbs.twimg.com/media/F2E7mtzXMAAO-WT?format=jpg&name=4096x4096" alt="">        
+  <p>El lanzamiento de Marvel's Spider-Man 2 está previsto para
+    dentro de tres meses, concretamente para el 20 de octubre
+    sólo en PS5 (unos días antes comenzará su precarga). Antes,
+    este verano, Insomniac Games se lo llevará a la San Diego
+    Comic-Con 2023 para mostrarlo a los asistentes y compartir
+    nuevos detalles del proyecto.</p>
+  <img src="https://www.mundodeportivo.com/alfabeta/hero/2023/07/marvels-spider-man-2.jpg?width=1200" alt="">
+  <p>Estamos seguros de que Venom será la gran estrella us quedas ma
+    Marvel's Spider-Man 2, una secuela protagonizada
+    Parker y Miles Morales que promete subir la apuesti
+    nivel narrativo como jugable con respecto a las dos
+    entregas. Sin embargo, Insomniac Games ha destac
+    durante la celebración de la San Diego Comic-Con :
+    no deberíamos desviar la atención de Kraven el Caz
+    antagonista que, en palabras de Jon Paquette, direc
+    narrativo del videojuego, funcionará como "el catalizador de
+    la historia" y será el responsable de que se desencadenen los
+    acontecimientos de esta nueva aventura.</p>
+</body>
+</html>
