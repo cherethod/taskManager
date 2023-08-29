@@ -1,0 +1,7 @@
+.user--name {
+  cursor: pointer;
+  &:hover {
+    background-color: dimgrey;
+    color: #fff;
+  }
+}

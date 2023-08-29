@@ -1,0 +1,114 @@
+.tasks-board {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;  
+  // background-color: pink;
+  gap: 5px;
+  overflow-y: scroll;
+  height: 100%;
+  padding: 0 10px;
+  border-bottom: 1px solid #000;
+}
+
+.task-card {
+  background-color: rgb(247, 181, 137);
+  border-radius: 10px;
+  width: 100%;
+  // min-height: 20vh ;
+  height: 20vh;
+  // max-height: 25vh;
+  display: grid;
+  grid-template-areas:    'name         name          name            name          status'
+                          'description  description   description     description   description'
+                          'priority     date          date            date          delete'
+  ;
+  grid-template-rows: 20% 60% 20%;
+  border: 1px solid #000;
+}
+.task-name {
+  grid-area: name;
+  // background-color: red;
+  color: white;
+  text-align: left;
+  padding-left: 15px;
+}
+.task-status {
+  grid-area: status;
+  // background-color: green;
+  display: flex;
+  place-content: end;
+  place-items: center;
+  padding-right: 5px;
+}
+.task-description {
+  grid-area: description;
+  height: 100%;
+  // background-color: orange;
+  color: #000;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  background-color: #fff;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.task-priority {
+  grid-area: priority;
+  // background-color: purple;
+  display: flex;
+  place-content: start;
+  transform: scale(.7);
+
+}
+.task-date {
+  grid-area: date;
+  // background-color: blue;
+  color: #fff;
+  height: 100%;
+  font-size: .6em;
+  display: flex;
+  padding-left: 20px;
+  place-items: center;
+}
+.task-remove-icon {
+  color: #6b6b6b;
+  grid-area: delete;
+  // background-color: pink;
+  display: flex;
+  width: min-content;
+  height: 100%;
+  align-items: center;
+  margin: 0 auto;
+}
+.task-action {
+  cursor: pointer;
+}
+.task-completed > .task-name {
+  color: rgb(170, 169, 169);
+  text-decoration: line-through;
+}
+.task-completed > .task-description {
+  color: rgb(241, 240, 240);
+  text-decoration: line-through;
+}
+.task-completed > .task-date {
+  color: rgb(170, 169, 169);
+  text-decoration: line-through;
+}
+.task-completed > .task-priority {
+  opacity: .2;
+}
+.task-completed > .task-remove-icon {
+  color: rgb(214, 126, 111);
+  opacity: .6;
+}
+
+.task-remove-icon:hover {
+  opacity: 1;
+  color: tomato;
+}
+
+.task-pending {
+  color: chocolate;
+  font-weight: 'bold';
+}
